@@ -70,13 +70,6 @@ async function run() {
           res.send(orders);
       });
 
-      app.get('/users/:id', async (req, res) => {
-        const id = req.params.id;
-        const query = { _id: ObjectId(id) };
-        const user = await productCollection.findOne(query);
-        // console.log('load user with id: ', id);
-        res.send(user);
-    });
 
     
 
